@@ -9,6 +9,7 @@ public class GeradorDeSenhas {
     private boolean maiusculas;
     private boolean numeros;
     private boolean simbolos;
+    private String senha;
 
     public GeradorDeSenhas(long caracteres, boolean maiusculas, boolean minusculas, boolean numeros, boolean simbolos) {
         this.caracteres = caracteres;
@@ -20,14 +21,13 @@ public class GeradorDeSenhas {
 
     public boolean isValid(){
         if (!this.simbolos && !this.maiusculas && !this.minusculas && !this.numeros) {
-            System.out.println("Você deve escolher uma categoria para a senha!");
             return false;
         } else {
             return true;
         }
     }
 
-    public String gerarSenha() {
+    public void gerarSenha() {
         if (this.isValid()){
             final Random gerador = new Random();
 
@@ -60,9 +60,13 @@ public class GeradorDeSenhas {
                 senha += opcoesStr.charAt(gerador.nextInt(opcoesStr.length()));
             }
 
-            return senha;
+            this.senha = senha;
         } else {
-            return null;
+            System.out.println("Você deve escolher pelo menos uma categoria para a senha!");
         }
+    }
+
+    public String getSenha() {
+        return senha;
     }
 }

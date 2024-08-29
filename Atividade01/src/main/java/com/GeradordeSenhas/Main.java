@@ -23,7 +23,8 @@ public class Main {
         boolean simb = sc.nextInt() == 1 ? true : false;
 
         GeradorDeSenhas gerador = new GeradorDeSenhas(qtd, maiusculas, min, num, simb);
-        String senha = gerador.gerarSenha();
+        gerador.gerarSenha();
+        String senha = gerador.getSenha();
 
         System.out.println("\nSENHA CRIADA COM SUCESSO!\n\n");
         System.out.println("Senha: " + senha);
