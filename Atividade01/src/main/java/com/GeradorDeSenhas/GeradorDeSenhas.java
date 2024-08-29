@@ -1,4 +1,4 @@
-package com.GeradordeSenhas;
+package com.GeradorDeSenhas;
 
 import java.util.HashMap;
 import java.util.Random;

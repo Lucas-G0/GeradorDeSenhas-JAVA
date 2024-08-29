@@ -1,4 +1,4 @@
-package com.GeradordeSenhas;
+package com.GeradorDeSenhas;
 
 import org.junit.jupiter.api.Test;
 
